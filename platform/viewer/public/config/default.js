@@ -16,16 +16,22 @@ window.config = {
   },
   servers: {
     dicomWeb: [
-      {
-        name: 'DCM4CHEE',
-        wadoUriRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
-        qidoSupportsIncludeField: true,
+     {
+        name: 'Orthanc',
+        wadoUriRoot: 'http://srv-captain--pacs/wado',
+        qidoRoot: 'http://srv-captain--pacs/dicom-web',
+        wadoRoot: 'http://srv-captain--pacs/dicom-web',
+        qidoSupportsIncludeField: false,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
         supportsFuzzyMatching: true,
+	      requestOptions: {
+	      requestFromBrowser: true,
+    	  auth: 'sunny:hellosunny11',
+    	  logRequests: true,
+    	  logResponses: false,
+    	  logTiming: true,
       },
     ],
   },
