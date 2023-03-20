@@ -11,6 +11,7 @@ window.config = {
     displaySetCount: 3,
     preventCache: false,
     prefetchDisplaySetsTimeout: 300,
+    maxNumPrefetchRequests: 100,
     displayProgress: true,
     includeActiveDisplaySet: true,
   },
@@ -35,6 +36,7 @@ window.config = {
       },
     ],
   },
+
   // Extensions should be able to suggest default values for these?
   // Or we can require that these be explicitly set
   hotkeys: [
